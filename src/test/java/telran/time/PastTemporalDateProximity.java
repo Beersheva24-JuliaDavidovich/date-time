@@ -17,6 +17,7 @@ public class PastTemporalDateProximity implements TemporalAdjuster{
     Temporal[] temporals;
     public PastTemporalDateProximity (Temporal[] temporals) {
         temporals = java.util.Arrays.copyOf(temporals, temporals.length);
+        //comments
         for(int i = 0; i < temporals.length; i++) {
             if (LocalDate.from(temporals[i]) > LocalDate.from(temporals[i + 1])) {
                 Temporal temp = new Temporal();
